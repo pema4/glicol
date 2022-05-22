@@ -261,4 +261,8 @@ impl<const N: usize> AudioContext<N> {
             nodedata.node.send_msg(msg.clone());
         }
     }
+
+    pub fn sample_rate(&self) -> usize {
+        self.config.sr
+    }
 }
